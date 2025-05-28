@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="Styles.css">
+    <script src="Script.js"></script>
+    <title>SUNDIAL</title>
+</head>
+<body>
+
+    <div class="header-container responsive-header">
+        <div class="left-header">
+            <img class="logo" src="/Images/Sundial_logo.png" alt="Logo">
+            <h1 class="site-title">Sundial Game Store</h1>
+        </div>
+        <div class="right-header">
+            <a href="#" class="w3-button w3-black">Support</a>
+            <a href="#" class="w3-button w3-black">Forum</a>
+            <a href="#" class="w3-button w3-black">Login</a>
+        </div>
+    </div>
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Library &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+
+    <div id="main">
+        <div class="navbar_1">
+            <nav>
+                <div class="w3-bar w3-black w3-border w3-padding-small" style="display: flex; align-items: center;">
+                    <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+                    <a href="#" class="w3-bar-item w3-button ">Home</a>
+                    <a href="Games.html" class="w3-bar-item w3-button">Games</a>
+                    <a href="#" class="w3-bar-item w3-button">News</a>
+                    <a href="#" class="w3-bar-item w3-button">Sale</a>
+                </div>
+            </nav>
+        </div>
+
+        <h2 class="w3-center">Featured Games</h2>
+
+        <div class="w3-center w3-content w3-display-container">
+            <img class="recomended_game" src="/Images/FakeSunny.png" style="width:50%" href="Games.html">
+            <img class="recomended_game" src="/Images/lamp.jpg" style="width:50%">
+            <img class="recomended_game" src="/Images/Sundial_logo.png" style="width:50%">
+            <img class="recomended_game" src="/Images/TrainCrash.jpg" style="width:50%">
+
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <div class="w3-container">
+            <p class="double text">
+                Step into the immersive universe of Shadowfall: Echoes of Time, a gripping adventure that blends strategy,
+                skill, and storytelling into one unforgettable experience. Whether you’re battling ancient creatures, solving
+                intricate puzzles, or exploring breathtaking environments, every choice you make shapes your journey.
+            </p>
+        </div>
+
+        <div class="w3-container w3-black">
+            <h1>Footer</h1>
+        </div>
+    </div>
+    
+</body>
+</html>

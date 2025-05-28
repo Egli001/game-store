@@ -1,0 +1,135 @@
+.recomended_game {
+    display: none;
+    width: 100%; /* Ensures all slides take full width of the container */
+    max-width: 600px; /* Controls max width for consistent sizing */
+    height: 400px; /* Fixed height to avoid layout shift */
+    object-fit: cover; /* Ensures image fills area, cropping if needed */
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 10px; /* Optional: smooth rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow */
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.right-header a {
+    margin-left: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+@media (max-width:600px) { 
+    .recomended_game{
+        height: 250px;
+    }
+}
+
+.w3-display-left, .w3-display-right {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+/* Closer positioning */
+.w3-display-left {
+    left: 150px;  /* Move closer from the left edge of image */
+  }
+  
+  .w3-display-right {
+    right: 150px; /* Move closer from the right edge of image */
+  }
+
+p.double {
+    border-style: double;
+    width: 100%; 
+    max-width: 600px;
+    height: auto; 
+    margin: 20px auto ;
+}
+
+.navbar_1{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.banner-image {
+    display: block;
+    margin: auto;
+    width: 50%;
+    
+  }
+
+/* Styles for individual game blocks */
+.game-main-blocks {
+    display: flex;
+    gap: 20px;
+    border: 2px solid #ff4500;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: left; /* align text normally since we're using flex now */
+    box-sizing: border-box;
+}
+
+.game-content {
+    display: flex;
+    align-items: center; /* vertically center image and text */
+    gap: 20px; /* spacing between image and text */
+}
+
+.game-img {
+    width: 150px; 
+    object-fit: cover;
+    border: 1px solid red;
+
+}
+
+
+.game-text h3, .game-text p {
+    margin: 0;
+}
+
+.main-game-img{
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    display: block;
+    
+}
+
+
+.img-container{
+    flex: 1 1 40%;
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+}
+
+.info-container{
+    flex: 1 1 60%;
+}
