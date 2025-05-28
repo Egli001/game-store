@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (user) {
       alert("Login successful!");
       localStorage.setItem("loggedInUser", JSON.stringify(user)); // Save user to localStorage
-      window.location.href = "../GameStoreWebsite/SUNDIAL_Front_Page.html";
+      window.location.href = "SUNDIAL_Front_Page.html";
     } else {
         alert("Invalid username or password.");
       }
