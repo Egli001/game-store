@@ -1,69 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport for mobile devices -->
+    
+    <!-- External CSS from W3Schools for basic styling and animations -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="Styles.css">
-    <script src="Script.js"></script>
-    <title>SUNDIAL</title>
+    
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="Styles.css">   <!-- Connect to styles -->
+    
+    <!-- Link to your custom JavaScript file -->
+    <script src="Script.js"></script> <!-- Connect to script -->
+    
+    <title>SUNDIAL</title> <!-- Title of the site shown on browser tab -->
 </head>
 <body>
 
-    <div class="header-container responsive-header">
-        <div class="left-header">
-            <img class="logo" src="/Images/Sundial_logo.png" alt="Logo">
-            <h1 class="site-title">Sundial Game Store</h1>
+    <!-- Header container that holds logo, site title, and navigation buttons -->
+    <div class="header-container responsive-header"> <!-- Main header container -->
+        <div class="left-header"> <!-- Left side of header with logo and site title -->
+            <img class="logo" src="Images/Sundial_logo.png" alt="Logo"> <!-- Site logo image -->
+            <h1 class="site-title">Sundial Game Store</h1> <!-- Site name/title -->
         </div>
-        <div class="right-header">
-            <a href="#" class="w3-button w3-black">Support</a>
-            <a href="#" class="w3-button w3-black">Forum</a>
-            <a href="#" class="w3-button w3-black">Login</a>
+        <div class="right-header"> <!-- Right side of header with navigation buttons -->
+            <a href="QandA.html" class="w3-button w3-black">Q&A</a> <!-- Link to Q&A page -->
+            <a href="index.html" class="w3-button w3-black" id="logoutBtn">Logout</a> <!-- Logout button linking to login page -->
         </div>
     </div>
 
+    <!-- Sidebar navigation menu that slides in from the left, initially hidden -->
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <!-- Button to close sidebar -->
         <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Library &times;</button>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        
+        <!-- Links to individual game pages -->
+        <a href="Game_1.html" class="w3-bar-item w3-button">Dark dungeon</a>
+        <a href="Game_2.html" class="w3-bar-item w3-button">historical moment</a>
+        <a href="Game_3.html" class="w3-bar-item w3-button">Train crash Salvage</a>
+        <a href="Game_4.html" class="w3-bar-item w3-button">Dragon Fight</a>
+
     </div>
 
+    <!-- Main content area -->
     <div id="main">
+        <!-- Navigation bar container -->
         <div class="navbar_1">
             <nav>
-                <div class="w3-bar w3-black w3-border w3-padding-small" style="display: flex; align-items: center;">
+                <!-- Navigation bar with black background and padding, using flexbox for layout -->
+                <div class="w3-bar w3-black w3-padding-small" style="display: flex; align-items: center;">
+                    <!-- Hamburger button to open sidebar -->
                     <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
-                    <a href="#" class="w3-bar-item w3-button ">Home</a>
+                    
+                    <!-- Main site navigation links -->
+                    <a href="SUNDIAL_Front_Page.html" class="w3-bar-item w3-button ">Home</a>
                     <a href="Games.html" class="w3-bar-item w3-button">Games</a>
-                    <a href="#" class="w3-bar-item w3-button">News</a>
-                    <a href="#" class="w3-bar-item w3-button">Sale</a>
+                    <a href="news.html" class="w3-bar-item w3-button">News</a>
                 </div>
             </nav>
         </div>
 
+        <!-- Heading for the featured games section, centered -->
         <h2 class="w3-center">Featured Games</h2>
 
+        <!-- Container for featured game images with display controls -->
         <div class="w3-center w3-content w3-display-container">
-            <img class="recomended_game" src="/Images/FakeSunny.png" style="width:50%" href="Games.html">
-            <img class="recomended_game" src="/Images/lamp.jpg" style="width:50%">
-            <img class="recomended_game" src="/Images/Sundial_logo.png" style="width:50%">
-            <img class="recomended_game" src="/Images/TrainCrash.jpg" style="width:50%">
+            <!-- Featured game images -->
+            <img class="recomended_game" src="Images/FakeSunny.png" style="width:50%" href="Games.html"> <!-- NOTE: 'href' on img has no effect -->
+            <img class="recomended_game" src="Images/towers.jpg" style="width:50%">
+            <img class="recomended_game" src="Images/traincrathsalvage.jpg" style="width:50%">
+            <img class="recomended_game" src="Images/dragonfight.jpg" style="width:50%">
 
+            <!-- Buttons to navigate between featured games -->
             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
 
+        <!-- Introduction paragraph about the store -->
         <div class="w3-container">
             <p class="double text">
-                Step into the immersive universe of Shadowfall: Echoes of Time, a gripping adventure that blends strategy,
-                skill, and storytelling into one unforgettable experience. Whether you’re battling ancient creatures, solving
-                intricate puzzles, or exploring breathtaking environments, every choice you make shapes your journey.
+                Welcome to Sundail Game Store – Your Portal to Great Games!
+                At Sundail Game Store, we’re passionate about gaming and dedicated to bringing you a curated collection of the greatest games across all genres. Whether you're into action-packed adventures, strategic challenges, immersive RPGs, or casual indie gems, Sundail has something for every type of gamer.
+                Discover new favorites, enjoy timeless classics, and stay ahead with the latest releases – all in one easy-to-navigate and fun-to-explore platform.
+                Great games. Great deals. Great times. Only at Sundail.
             </p>
         </div>
 
-        <div class="w3-container w3-black">
-            <h1>Footer</h1>
+        <!-- Fixed footer at the bottom with copyright info -->
+        <div class="w3-container w3-black" style="position: fixed; bottom: 0; width: 100%;text-align: center;">
+            <p class="w3-small w3-margin-top">&copy; 2024 Sundial Game Store. All rights reserved.</p>
         </div>
     </div>
     
