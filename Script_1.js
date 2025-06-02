@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutButton.addEventListener("click", () => {
       localStorage.removeItem("loggedInUser"); // Remove the logged in user
       alert("You have been logged out.");
-      window.location.href = "../index.html"; // Redirect to login or landing page
+      window.location.href = "index.html"; // Redirect to login or landing page
     });
   }
 
