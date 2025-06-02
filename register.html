@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="Styles.css">
-    <script src="Script.js"></script>
+  <meta charset="UTF-8"> 
+  <title>Register</title> <!-- Title -->
+  
+  <!-- Link to external CSS stylesheet for page styles -->
+  <link rel="stylesheet" href="Styles_1.css">
+  
+  <!-- Link to external JavaScript file, deferred so it loads after HTML parsing -->
+  <script defer src="Script_1.js"></script> <!-- 'defer' loads after HTML -->
 </head>
 <body>
-    <div class="header-container responsive-header">
-        <div class="left-header">
-            <img class="logo" src="Images/Sundial_logo.png" alt="Logo">
-            <h1 class="site-title">Sundial Game Store</h1>
-        </div>
-        <div class="right-header">
-            <a href="SUNDIAL_Front_Page.html" class="w3-button w3-black">Home</a>
-            <a href="#" class="w3-button w3-black">Support</a>
-            <a href="#" class="w3-button w3-black">Forum</a>
-            <a href="index.html" class="w3-button w3-black">Logout</a>
-        </div>
-    </div>
+  <!-- Wrapper div to center and style the form -->
+  <div class="wrapper">
+    <form id="registerForm"> 
+      <h1>Register</h1> <!-- Form heading -->
 
-    <div class="w3-container w3-padding-32">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feedback, or need support, please reach out to us using the form below or via our contact details.</p>
-        <form class="w3-container w3-card-4 w3-light-grey w3-padding-16" style="max-width:500px;margin:auto;">
-            <label for="name">Name</label>
-            <input class="w3-input w3-border" type="text" id="name" name="name" required>
+      <!-- Username input field container -->
+      <div class="input-box">
+        <input type="text" id="regUsername" placeholder="Username" required> <!-- Username input -->
+      </div>
 
-            <label for="email" class="w3-margin-top">Email</label>
-            <input class="w3-input w3-border" type="email" id="email" name="email" required>
+      <!-- Email input field container -->
+      <div class="input-box">
+        <input type="email" id="regEmail" placeholder="Email" required> <!-- Email input -->
+      </div>
 
-            <label for="message" class="w3-margin-top">Message</label>
-            <textarea class="w3-input w3-border" id="message" name="message" rows="4" required></textarea>
+      <!-- Password input field container -->
+      <div class="input-box">
+        <input type="password" id="regPassword" placeholder="Password" required> <!-- Password input -->
+      </div>
 
-            <button class="w3-button w3-black w3-margin-top" type="submit">Send Message</button>
-        </form>
-        <div class="w3-container w3-margin-top" style="max-width:500px;margin:auto;">
-            <h4>Other ways to contact us:</h4>
-            <p>Email: <a href="mailto:support@sundialgamestore.com">support@sundialgamestore.com</a></p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <p>Address: 123 Sundial Ave, Game City, Country</p>
-        </div>
-    </div>
+      <!-- Confirm password input field container -->
+      <div class="input-box">
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required> <!-- Confirm password input -->
+      </div>
+
+      <!-- Submit button to send registration data -->
+      <button type="submit" class="btn">Register</button>
+
+      <!-- Link to login page for users who already have an account -->
+      <div class="register-link">
+        <p>Already have an account? <a href="index.html">Login</a></p>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
