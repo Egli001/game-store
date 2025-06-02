@@ -1,91 +1,183 @@
-/*  Global Reset & Base Styles  */
-* {
-    box-sizing: border-box; /* Include padding and border in element's total width/height */
-    font-family: Arial, Helvetica, sans-serif; /* Default font stack */
-    margin: 0;
-    padding: 0;
-}
 
-/*  Body Layout  */
 body {
-    display: flex; /* Center the wrapper horizontally and vertically */
-    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.recomended_game {
+    display: none;
+    width: 100%; /* Ensures all slides take full width of the container */
+    max-width: 600px; /* Controls max width for consistent sizing */
+    height: 400px; /* Fixed height to avoid layout shift */
+    object-fit: cover; /* Ensures image fills area, cropping if needed */
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 10px; /* Optional: smooth rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow */
+  }
+
+  /* Header container styling with flex layout */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
-    background-color: rgb(25, 202, 230);
-; /* Background color */
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+/*the header on the top of the page*/
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and site title */
 }
 
-/*  Form Container (Login/Register Box)  */
-.wrapper {
-    width: 400px;
-    background: white;
-    color: #333; /* Text color */
-    padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Box shadow for depth */
+/* Site title style */
+.site-title {
+    font-size: 24px;
 }
 
-/* Form Heading  */
-.wrapper h1 {
-    font-size: 32px;
+/* Spacing between navigation links on the right */
+.right-header a {
+    margin-left: 10px;
+}
+
+/*logo size*/
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive image height for small screens */
+@media (max-width:600px) { 
+    .recomended_game{
+        height: 250px;
+    }
+}
+/* Style for left and right arrow*/
+.w3-display-left, .w3-display-right {
+    top: 50%;
+    position: absolute;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;/*arrows appear above content */
+  }
+
+/* Position of the arrows */
+.w3-display-left {
+    left: 150px;  
+  }
+  
+  .w3-display-right {
+    right: 150px; 
+  }
+
+  /*The paragraf of the main website*/
+p.double {
+    border-style: double;
+    width: 100%; 
+    max-width: 700px;
+    height: auto; 
+    margin: 20px auto ;   /*The space between the image and the tex(pararaf)*/
+
+}
+
+/*the style for the image in the Games page*/
+.banner-image {
+    display: block;
+    margin: auto;
+    width: 90%;
+    
+  }
+
+/* Styles for individual game blocks */
+.game-main-blocks {
+    display: flex;
+    gap: 20px;
+    border: 2px solid #ff4500; /*orange border*/
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: left; /* align text normally since we're using flex now */
+    box-sizing: border-box;
+}
+
+/* Aligns image and text inside game block */
+.game-content {
+    display: flex;
+    align-items: center; /* vertically center image and text */
+    gap: 20px; /* spacing between image and text */
+}
+
+
+/* Here is the style for the image in the details*/
+.main-game-img{
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    display: block;
+    
+}
+
+/*Style The image in the games website G_1, G_2...*/
+.img-container{
+    flex: 1 1 40%;
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Container for game  text*/
+.info-container{
+    flex: 1 1 60%;
+}
+
+/* Wrapper for the whole main section on Games */
+.main-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Centered banner ad section */
+.ads-banner {
     text-align: center;
+    border: 2px dashed gray;
+    padding: 20px;
     margin-bottom: 30px;
 }
 
-/* Input Fields */
-.input-box {
-    margin-bottom: 20px;
-    position: relative;
+/* Align and style game blocks */
+#game-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.input-box input {
-    width: 100%;
-    padding: 12px 20px;
+/* Styling for the game blocks in the game page*/
+.game-block {
+    background-color: #fff;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s ease; /* Smooth border color transition */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.input-box input:focus {
-    border-color: green; /* Highlight border on focus */
-    outline: none;
+.game-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /*Gap between the image and the text*/
+}
+/*The image of the game in games page*/
+.game-img {
+    width: 120px;
+    height: auto;
+    border-radius: 4px; /*radius on the imge*/
+}
+/*Margin of the title of the games in games page*/
+.game-text h3 {
+    margin: 0 0 10px 0;
 }
 
-.input-box input::placeholder {
-    color: #999; /* Placeholder text color */
+.game-text p {
+    margin: 0;/*Space between the paragraf of the text*/
 }
 
-/* Submit Button*/
-.btn {
-    width: 100%;
-    padding: 12px;
-    background: green;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: greenyellow; /* Button hover effect */
-}
-
-/* Registration/Login Link Section */
-.register-link {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.register-link a {
-    color: blue;
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    text-decoration: underline; /* Link hover underline */
-}
