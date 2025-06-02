@@ -9,64 +9,77 @@
     <script src="Script.js"></script>
 </head>
 <body>
+    <!-- Header container including logo, site title, and navigation links -->
     <div class="header-container responsive-header">
-        <div class="left-header">
-            <img class="logo" src="/Images/Sundial_logo.png" alt="Logo">
-            <h1 class="site-title">Sundial Game Store</h1>
+        <div class="left-header"> <!-- Left side of header -->
+            <img class="logo" src="Images/Sundial_logo.png" alt="Logo"> <!-- Site logo image -->
+            <h1 class="site-title">Sundial Game Store</h1> <!-- Site title -->
         </div>
-        <div class="right-header">
-            <a href="#" class="w3-button w3-black">Support</a>
-            <a href="#" class="w3-button w3-black">Forum</a>
-            <a href="#" class="w3-button w3-black">Login</a>
+        <div class="right-header"> <!-- Right side of header with navigation buttons -->
+            <a href="SUNDIAL_Front_Page.html" class="w3-button w3-black">Home</a>
+            <a href="news.html" class="w3-button w3-black">News</a>
+            <a href="QandA.html" class="w3-button w3-black">Q&A</a>
+            <a href="index.html" class="w3-button w3-black">Logout</a>
         </div>
     </div>
+
+    <!-- Banner image section -->
     <div>
-        <img src="/Images/banner.jpg" alt="banner" class="banner-image">
+        <img src="Images/Add.png" alt="banner" class="banner-image"> <!-- Promotional or banner image -->
     </div>
 
-    <section id="game-blocks"> <!-- Section containing game blocks -->
-        <div id="game_01" class="game-block">
-            <div class="game-content">
-              <img src="Images/FakeSunny.png" alt="Sunny" class="game-img"> 
-              <div class="game-text">
-                <h3><a href="Game_1.html">Game Name</a></h3>
-                <p>game discription</p>
+    <!-- Main content container -->
+    <main class="main-container">
+  
+      <!-- Section containing all game blocks -->
+      <section id="game-blocks">
+          <!-- Individual game block -->
+          <div class="game-block">
+              <div class="game-content">
+                  <img src="Images/FakeSunny.png" alt="dark dungeon" class="game-img"> <!-- Game image -->
+                  <div class="game-text">
+                      <h3><a href="Game_1.html">Dark dungeon</a></h3> <!-- Link to game detail page -->
+                      <p>Game description</p> 
+                  </div>
               </div>
-            </div>
           </div>
+          <!--Game Block-->
+          <div class="game-block">
+            <div class="game-content">
+                <img src="Images/towers.jpg" alt="towers" class="game-img">
+                <div class="game-text">
+                    <h3><a href="Game_2.html">Tower one</a></h3>
+                    <p>Game description</p>
+                </div>
+            </div>
+        </div>
 
-          <div id="game_01" class="game-block">
-            <div class="game-content">
-              <img src="Images/FakeSunny.png" alt="Sunny" class="game-img"> 
+        <div class="game-block">
+          <div class="game-content">
+              <img src="Images/traincrathsalvage.jpg" alt="traincrash" class="game-img">
               <div class="game-text">
-                <h3><a href="luffy.html">Game Name</a></h3>
-                <p>game discription</p>
+                  <h3><a href="Game_3.html">Train Crash Salvage</a></h3>
+                  <p>Game description</p>
               </div>
-            </div>
           </div>
+      </div>
 
-          <div id="game_01" class="game-block">
-            <div class="game-content">
-              <img src="Images/FakeSunny.png" alt="Sunny" class="game-img"> 
-              <div class="game-text">
-                <h3><a href="luffy.html">Game Name</a></h3>
-                <p>game discription</p>
-              </div>
+      <div class="game-block">
+        <div class="game-content">
+            <img src="Images/dragonfight.jpg" alt="dragonfight" class="game-img">
+            <div class="game-text">
+                <h3><a href="Game_4.html">Dragon Fight</a></h3>
+                <p>Game description</p>
             </div>
-          </div>
+        </div>
+    </div>
+  
+      </section>
+  </main>
 
-          <div id="game_01" class="game-block">
-            <div class="game-content">
-              <img src="Images/FakeSunny.png" alt="Sunny" class="game-img"> 
-              <div class="game-text">
-                <h3><a href="luffy.html">Game Name</a></h3>
-                <p>game discription</p>
-              </div>
-            </div>
-          </div>
-    </section>
-    <div class="w3-container w3-black">
-        <h1>Footer</h1>
+    <!-- Fixed footer at the bottom -->
+    <div class="w3-container w3-black" style="position: fixed; bottom: 0; width: 100%; text-align: center;">
+        <p class="w3-small w3-margin-top">&copy; 2024 Sundial Game Store. All rights reserved.</p>
     </div>
 </body>
 </html>
